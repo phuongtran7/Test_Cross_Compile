@@ -77,7 +77,7 @@ private:
 		if (!error)
 		{
 			std::scoped_lock lock(mutex_);
-			//fmt::print("Received: {} bytes.\n", bytes_recvd);
+			fmt::print("Received: {} bytes.\n", bytes_recvd);
 			const auto recieved = flexbuffers::GetRoot(data_, bytes_recvd).AsFloat();
 			angle_of_attack_ = recieved;
 			StartReceive();

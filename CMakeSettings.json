@@ -1,33 +1,20 @@
 ﻿{
   "configurations": [
     {
-      "name": "x64-Debug",
-      "generator": "Ninja",
-      "configurationType": "Debug",
-      "inheritEnvironments": [ "msvc_x64_x64" ],
-      "buildRoot": "${projectDir}\\out\\build\\${name}",
-      "installRoot": "${projectDir}\\out\\install\\${name}",
-      "cmakeCommandArgs": "",
+      "addressSanitizerRuntimeFlags": "detect_leaks=0",
       "buildCommandArgs": "-v",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "cmakeCommandArgs": "-DCMAKE_TOOLCHAIN_FILE=${projectDir}\\${projectDirName}\\Toolchain-RaspberryPi.cmake",
+      "configurationType": "Debug",
       "ctestCommandArgs": "",
-      "variables": []
-    },
-    {
-      "name": "gnueabihf-Debug",
-      "generator": "Ninja",
-      "inheritEnvironments": [ "linux-arm" ],
-      "remoteCopySources": false,
       "environments": [
         {
-          "INCLUDE": "c:\\SysGCC\\rpi\\arm-linux-gnueabihf\\sysroot\\usr\\include\\arm-linux-gnueabihf\\c++\\6.3.0;c:\\SysGCC\\rpi\\arm-linux-gnueabihf\\sysroot;c:\\SysGCC\\rpi\\arm-linux-gnueabihf\\sysroot\\usr\\include"
+          "INCLUDE": "D:\\SysGCC\\raspberry\\arm-linux-gnueabihf\\sysroot\\usr\\include\\arm-linux-gnueabihf\\c++\\6.3.0\\;D:\\SysGCC\\raspberry\\arm-linux-gnueabihf\\sysroot\\;D:\\SysGCC\\raspberry\\arm-linux-gnueabihf\\sysroot\\usr\\include\\",
         }
       ],
-      "configurationType": "Debug",
-      "buildCommandArgs": "-v",
-      "buildRoot": "${projectDir}\\out\\build\\${name}",
-      "ctestCommandArgs": "",
-      "addressSanitizerRuntimeFlags": "detect_leaks=0",
-      "cmakeCommandArgs": "-DCMAKE_TOOLCHAIN_FILE=${projectDir}\\${projectDirName}\\Toolchain-RaspberryPi.cmake",
+      "generator": "Ninja",
+      "inheritEnvironments": [ "linux-arm" ],
+      "name": "gnueabihf-Debug",
       "variables": []
     }
   ]
