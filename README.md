@@ -49,3 +49,7 @@ This file will instruct Cmake to build the project with installed GNU Toolchain.
   },
 ```
 9. Select the kit and build the project.
+
+## Notes:
+1. [Using VS and VS Code for Embedded C/C++ Development - Marc Goodner, Microsoft](https://www.youtube.com/watch?v=IrSUDGx_6kI).
+2. [CrossCompileExtension](https://github.com/robotdad/CrossCompileExtension).
