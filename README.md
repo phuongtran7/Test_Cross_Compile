@@ -33,6 +33,7 @@ SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 ```
 
 This file will instruct Cmake to build the project with installed GNU Toolchain. Replace `D:/SysGCC/raspberry` with your installation of the toolchain.
+
 5. Place the `Toolchain-RaspberryPi.cmake` where it's easy to reference to. I personally just put it right into the GNU toolchain folder, `D:/SysGCC/raspberry/Toolchain-RaspberryPi.cmake`.
 6. Create new CMake project with VSCode and [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools) plugin.
 7. Open `Edit User-Local CMake Kits` from VSCode command palette.
